@@ -8,6 +8,10 @@ Santulankarta is a simple Layer 7 load balancer implementation written in Rust. 
 - Performs health checks on backend servers to ensure their availability.
 - Proxies requests to healthy backend servers for processing.
 
+## Why the name?
+
+Santulankarta is the sankrit term for "Balancer".
+
 ## Getting Started
 
 ### Prerequisites
