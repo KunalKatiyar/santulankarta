@@ -1,6 +1,6 @@
 # Santulankarta: A 7-Layer Load Balancer Written in Rust
 
-Santulankarta is a simple Layer 7 load balancer implementation written in Rust. This project aims to demonstrate the basic concepts of load balancing and health checking using the Rust programming language and the hyper web framework.
+Santulankarta is a simple Layer 7 load balancer implementation written in Rust. This project aims to demonstrate the basic concepts of load balancing and health checking using the Rust programming language and the hyperweb framework.
 
 ## Features
 
