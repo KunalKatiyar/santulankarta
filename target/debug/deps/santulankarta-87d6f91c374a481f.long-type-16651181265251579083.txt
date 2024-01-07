@@ -1,0 +1,1 @@
+server::shutdown::Graceful<AddrIncoming, hyper::service::make::MakeServiceFn<[closure@src/main.rs:11:36: 11:43]>, impl Future<Output = Result<(), std::io::Error>>, hyper::common::exec::Exec>
