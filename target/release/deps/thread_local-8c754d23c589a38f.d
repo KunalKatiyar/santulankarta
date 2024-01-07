@@ -1,0 +1,10 @@
+/home/kunalkatiyar/rust-projects/santulankarta/target/release/deps/thread_local-8c754d23c589a38f.rmeta: /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/lib.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/cached.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/thread_id.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/unreachable.rs
+
+/home/kunalkatiyar/rust-projects/santulankarta/target/release/deps/libthread_local-8c754d23c589a38f.rlib: /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/lib.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/cached.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/thread_id.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/unreachable.rs
+
+/home/kunalkatiyar/rust-projects/santulankarta/target/release/deps/thread_local-8c754d23c589a38f.d: /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/lib.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/cached.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/thread_id.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/unreachable.rs
+
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/lib.rs:
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/cached.rs:
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/thread_id.rs:
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/thread_local-1.1.7/src/unreachable.rs:

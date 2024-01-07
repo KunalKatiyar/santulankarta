@@ -3,11 +3,11 @@ pub mod servers {
     use std::convert::Infallible;
     use hyper::{Body, Request, Response, Server};
     use hyper::service::{make_service_fn, service_fn};
-    async fn handle_request(req: Request<Body>, server_name: String) -> Result<Response<Body>, Infallible> {
+    async fn handle_request_servers(_req: Request<Body>, server_name: String) -> Result<Response<Body>, Infallible> {
         let mut servers: HashMap<&str, &str> = HashMap::new();
-        servers.insert("127.0.0.1:8080", "1");
-        servers.insert("127.0.0.1:8081", "2");
-        servers.insert("127.0.0.1:8082", "3");
+        servers.insert("127.0.0.1:8081", "1");
+        servers.insert("127.0.0.1:8082", "2");
+        servers.insert("127.0.0.1:8083", "3");
         Ok(Response::new(Body::from(format!("Hello, from server {}", servers.get(server_name.as_str()).unwrap()))))
     }
 
@@ -19,18 +19,19 @@ pub mod servers {
                         Some(header_value) => header_value.to_str().unwrap_or("Unknown").to_owned(),
                         None => "Unknown".to_owned(),
                     };
-                    handle_request(req, server_name.clone())
+                    handle_request_servers(req, server_name.clone())
                 }))
             }
         });
 
-        let addr1 = ([127, 0, 0, 1], 8080).into();
-        let addr2 = ([127, 0, 0, 1], 8081).into();
-        let addr3 = ([127, 0, 0, 1], 8082).into();
+        let addr1 = ([127, 0, 0, 1], 8081).into();
+        let addr2 = ([127, 0, 0, 1], 8082).into();
+        let addr3 = ([127, 0, 0, 1], 8083).into();
+
 
         let server1 = Server::bind(&addr1).serve(make_svc.clone());
         let server2 = Server::bind(&addr2).serve(make_svc.clone());
-        let server3 = Server::bind(&addr3).serve(make_svc);
+        let server3 = Server::bind(&addr3).serve(make_svc.clone());
 
         tokio::spawn(server1);
         tokio::spawn(server2);

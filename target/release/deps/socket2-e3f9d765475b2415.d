@@ -1,0 +1,11 @@
+/home/kunalkatiyar/rust-projects/santulankarta/target/release/deps/socket2-e3f9d765475b2415.rmeta: /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/lib.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sockaddr.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/socket.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sockref.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sys/unix.rs
+
+/home/kunalkatiyar/rust-projects/santulankarta/target/release/deps/libsocket2-e3f9d765475b2415.rlib: /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/lib.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sockaddr.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/socket.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sockref.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sys/unix.rs
+
+/home/kunalkatiyar/rust-projects/santulankarta/target/release/deps/socket2-e3f9d765475b2415.d: /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/lib.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sockaddr.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/socket.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sockref.rs /home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sys/unix.rs
+
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/lib.rs:
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sockaddr.rs:
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/socket.rs:
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sockref.rs:
+/home/kunalkatiyar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/socket2-0.5.3/src/sys/unix.rs:
