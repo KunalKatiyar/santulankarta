@@ -3,9 +3,11 @@ mod servers;
 use hyper::{Body, Client, Request, Response, Server};
 use hyper::service::{make_service_fn, service_fn};
 use std::collections::HashMap;
+use std::env;
 use std::net::SocketAddr;
 use std::sync::{Arc, Mutex};
 use tokio::time::{Duration, Instant};
+use log::info;
 
 type Error = Box<dyn std::error::Error + Send + Sync>;
 #[allow(dead_code)]
@@ -55,6 +57,7 @@ impl LoadBalancer {
         }
 
         self.healthy_backends = healthy_backends;
+        println!("\nHealthy backends: {:?}", self.healthy_backends);
         self.last_health_check = Instant::now();
     }
 
@@ -88,6 +91,8 @@ async fn handle_request(req: Request<Body>, lb: Arc<Mutex<LoadBalancer>>) -> Res
     }
 
     let uri = format!("http://{}", backend);
+    println!("Request received on load balancer");
+    println!("Chose healthy backend -> {} \nConnecting...", backend);
     let proxied_req = Request::builder()
         .method(req.method())
         .uri(uri)
@@ -103,6 +108,7 @@ async fn handle_request(req: Request<Body>, lb: Arc<Mutex<LoadBalancer>>) -> Res
 
     let client = Client::new();
     let proxied_response = client.request(proxied_req).await?;
+    println!("Connected to {} !\n", backend);
 
     Ok(proxied_response)
 }
@@ -110,18 +116,22 @@ async fn handle_request(req: Request<Body>, lb: Arc<Mutex<LoadBalancer>>) -> Res
 #[tokio::main]
 async fn main() -> Result<(), Error> {
 
+    let args: Vec<String> = env::args().collect();
+    let args_servers: Vec<String> = args[1..].to_vec();
+
     tokio::spawn(async move {
         servers::servers::create_servers().await;
     });
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
-    let backend_servers = vec!["127.0.0.1:8081".to_string(), "127.0.0.1:8082".to_string(), "127.0.0.1:8083".to_string(),];
+    let mut backend_servers = vec!["127.0.0.1:8081".to_string(), "127.0.0.1:8082".to_string(), "127.0.0.1:8083".to_string(),];
+    if args_servers.len() > 0 {
+        backend_servers = args_servers;
+    }
     let health_check_interval = Duration::from_secs(10);
 
     let lb = LoadBalancer::new(backend_servers.clone(), health_check_interval).await;
     let lb = Arc::new(Mutex::new(lb));
-
-
 
     let make_svc = make_service_fn(|_conn| {
         let lb = lb.clone();
@@ -130,7 +140,7 @@ async fn main() -> Result<(), Error> {
 
     let server = Server::bind(&addr).serve(make_svc);
 
-    println!("Load balancer listening on http://{}", addr);
+    println!("Load balancer listening on http://{} \n", addr);
     if let Err(e) = server.await {
         eprintln!("Server error: {}", e);
     }

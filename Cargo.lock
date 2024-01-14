@@ -666,6 +666,7 @@ name = "santulankarta"
 version = "0.1.0"
 dependencies = [
  "hyper",
+ "log",
  "mini-redis",
  "tokio",
 ]
